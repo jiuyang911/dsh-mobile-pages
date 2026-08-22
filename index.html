@@ -30,7 +30,7 @@
 
 <h3>1. 如何配对连接我的 Harness 实例？</h3>
 <p>
-  1) 在电脑上安装 Harness 插件 <code>@jiuyang911/dsh-mobile-extras</code>（官方已内置远程接入能力，本插件补充移动端所需端点）；<br>
+  1) 在电脑上安装 Harness 插件 <code>@jiuyang911/dsh-mobile-extras</code>（唯一需要的插件，包含配对、认证代理与中继隧道）；<br>
   2) 在 <code>$DSH_HOME/cordis.patch.yml</code> 中配置插件并指定中继地址 <code>wss://relay.lobsternetwork.top/tunnel</code>，然后运行 <code>dsh web</code>；<br>
   3) 在连接页点击「扫一扫配对二维码」，扫描电脑端展示的配对二维码（<code>dsht://pair?i=…&amp;c=…</code> 格式）；<br>
   4) 或手动输入 9 位实例码 + 6 位配对码完成连接。
