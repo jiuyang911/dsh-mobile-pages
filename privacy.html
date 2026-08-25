@@ -1,71 +1,102 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>DSH Mobile — Privacy Policy / 隐私政策</title>
 <style>
   :root { color-scheme: light dark; }
-  body { font-family: -apple-system, "PingFang SC", "Helvetica Neue", sans-serif; max-width: 760px; margin: 0 auto; padding: 32px 20px 64px; line-height: 1.8; }
-  h1 { font-size: 26px; }
-  h2 { font-size: 19px; margin-top: 32px; border-bottom: 1px solid #ddd; padding-bottom: 6px; }
-  .updated { color: #666; font-size: 14px; }
-  .zh { color: #555; font-size: 14.5px; }
-  footer { margin-top: 48px; color: #999; font-size: 13px; }
-  @media (prefers-color-scheme: dark) { .zh { color: #aaa; } }
+  body { font-family: -apple-system, "PingFang SC", "Helvetica Neue", sans-serif; max-width: 720px; margin: 0 auto; padding: 32px 20px 64px; line-height: 1.75; }
+  h1 { font-size: 25px; margin-bottom: 4px; }
+  h2 { font-size: 18px; margin-top: 34px; padding-bottom: 5px; border-bottom: 1px solid rgba(127,127,127,0.25); }
+  .updated { color: #888; font-size: 14px; margin-top: 0; }
+  .zh h2 { margin-top: 44px; }
+  .toc { color: #666; font-size: 14px; }
+  footer { margin-top: 56px; color: #999; font-size: 13px; border-top: 1px solid rgba(127,127,127,0.2); padding-top: 16px; }
 </style>
 </head>
 <body>
 
-<h1>DSH Mobile — Privacy Policy / 隐私政策</h1>
-<p class="updated">Last updated / 更新日期：August 2026 / 2026 年 8 月</p>
+<h1>DSH Mobile Privacy Policy</h1>
+<p class="updated">Last updated: August 25, 2026</p>
 
-<p><strong>English:</strong> DSH Mobile is provided by an independent developer. This app respects and protects your privacy. This policy explains what information we process and how.</p>
-<p class="zh"><strong>中文：</strong>DSH Mobile 由个人开发者提供。本应用尊重并保护用户的隐私，本政策说明我们如何收集、使用和处理相关信息。</p>
+<p>DSH Mobile is made by me, an independent developer. It's a remote client for DeepSeek Harness, an open-source agent runtime that you run on your own computer. Short version of this policy: the app has no accounts, no analytics, no ads, and no tracking. Your conversations live on your own devices, and I've designed things so that I have no way to read them.</p>
 
-<h2>1. Where Data Is Stored / 数据存储位置</h2>
-<p><strong>English:</strong> The core design principle of this app is <strong>data localization</strong>: your conversations, task records and project files always remain on your own device and your own self-hosted Harness server. Neither this app nor its relay service stores, parses, or reads your conversation content.</p>
-<p class="zh"><strong>中文：</strong>本应用的核心设计原则是<strong>数据本地化</strong>：你的对话内容、任务记录和项目文件始终存储在你自己的设备与你自己运行的 Harness 服务器上。本应用及其中继服务不存储、不解析、不读取你的对话内容。</p>
+<h2>What's stored, and where</h2>
+<p>Your chats are kept in two places, both yours: a cache inside the app on your phone, and your own Harness server. Nothing conversation-related is sent to me or stored anywhere I control.</p>
+<p>The pairing credentials that link your phone to your instance (an instance ID and a device token) are stored in the phone's secure storage (Keychain on iOS). They exist so you don't have to re-enter codes every time. They never leave your device except through the encrypted connection to your own server.</p>
 
-<h2>2. Information We Process / 我们收集的信息</h2>
-<p><strong>English:</strong> This app processes the following information only to the extent necessary:</p>
+<h2>About the relay</h2>
+<p>To reach your computer from outside your home network, traffic passes through a relay server I operate. The relay forwards encrypted bytes between your phone and your computer. It doesn't hold credentials, doesn't decrypt application traffic, and doesn't keep logs of content. If I unplugged it tomorrow, I would have nothing of yours to hand over.</p>
+
+<h2>Permissions</h2>
+<p>The app asks for these, only when you use the matching feature:</p>
 <ul>
-  <li><strong>Connection information</strong>: instance identifier and device pairing token (hashed);</li>
-  <li><strong>Content you submit</strong>: chat messages and images you choose to send to your own DSH instance;</li>
-  <li><strong>Subscription information</strong>: Apple In-App Purchase subscription status.</li>
-</ul>
-<p class="zh"><strong>中文：</strong>本应用仅在必要范围内处理以下信息：</p>
-<ul class="zh">
-  <li><strong>连接信息</strong>：实例标识、设备配对令牌（经哈希处理）；</li>
-  <li><strong>用户提交内容</strong>：你选择发送到自己 DSH 实例的聊天消息与图片；</li>
-  <li><strong>订阅信息</strong>：Apple 内购订阅状态。</li>
+  <li><strong>Camera</strong> — used to scan the pairing QR code shown by your computer during setup. No pictures are saved or uploaded.</li>
+  <li><strong>Photo library</strong> — used only when you pick an image to send in a chat.</li>
+  <li><strong>Notifications</strong> — optional, off by default. Reminders for finished tasks or pending approvals are generated locally on the phone; there is no push server.</li>
 </ul>
 
-<h2>3. How Information Is Used / 信息的使用</h2>
-<p><strong>English:</strong> We use the information above solely to: provide pairing and remote connection between your device and your own instance; process subscriptions and unlock features; improve product quality and stability; and provide technical support. We do not use your data for advertising, analytics, or marketing.</p>
-<p class="zh"><strong>中文：</strong>我们使用上述信息仅用于：提供设备与你自己实例之间的配对与远程连接服务、处理订阅与解锁功能、改进产品质量与稳定性、提供技术支持。我们不会将你的数据用于广告、分析或营销。</p>
+<h2>Purchases</h2>
+<p>The optional Pro upgrade is sold through Apple's In-App Purchase. Payment details go to Apple; I never see your card or billing info. What I can see, if anything, is limited to the subscription status Apple reports to the app on your device.</p>
 
-<h2>4. Information Sharing / 信息共享</h2>
-<p><strong>English:</strong> We do <strong>not</strong> sell, rent, or otherwise disclose your personal information to any third party. Information may only be disclosed when: (a) required by applicable law; or (b) necessary to protect the rights and safety of the app, its users, or the public.</p>
-<p class="zh"><strong>中文：</strong>我们<strong>不会</strong>出售、出租或以任何方式向第三方出售你的个人信息。仅在以下情形下可能披露：法律法规要求；或为保护本应用、用户或公众的权利与安全所必需。</p>
+<h2>What there isn't</h2>
+<p>No user accounts. No analytics or crash-reporting SDKs. No advertising. No cross-app tracking. No server-side profile of you anywhere.</p>
 
-<h2>5. Data Security / 数据安全</h2>
-<p><strong>English:</strong> Device tokens are stored hashed and connections are transmitted over encrypted channels. The relay service follows a "zero-persistence" design and does not store any business data. That said, no network transmission can be guaranteed absolutely secure — please safeguard your instance credentials.</p>
-<p class="zh"><strong>中文：</strong>设备令牌经哈希处理，连接通过加密通道传输。中继服务采用"零落盘"设计，不持久化任何业务数据。尽管如此，任何网络传输都无法保证绝对安全，请妥善保管你的实例凭据。</p>
+<h2>Deleting your data</h2>
+<p>Delete a pairing in the app (Settings, then remove the instance) and its stored credentials are wiped from the phone right away; your computer also revokes that device. Uninstall the app and everything local — chat cache, settings, credentials — goes with it. Conversations on your own Harness server are yours to manage there.</p>
 
-<h2>6. Children's Privacy / 儿童隐私</h2>
-<p><strong>English:</strong> This app is intended for professional developers and adult users. It is not directed at children under 13, and we do not knowingly collect personal information from children.</p>
-<p class="zh"><strong>中文：</strong>本应用面向专业开发者与成年用户，不面向 13 岁以下儿童，也不会故意收集儿童的个人信息。</p>
+<h2>Children</h2>
+<p>This is a developer tool, not meant for kids. I don't knowingly collect information from anyone under 13.</p>
 
-<h2>7. Policy Updates / 政策更新</h2>
-<p><strong>English:</strong> We may update this policy from time to time. Updates will be posted on this page with a revised "last updated" date; material changes may be announced in-app.</p>
-<p class="zh"><strong>中文：</strong>我们可能不时更新本政策。更新后将在本页面发布，并更新"更新日期"。重大变更将以应用内提示等方式通知。</p>
+<h2>Changes to this policy</h2>
+<p>If something here changes, I'll update this page and bump the date above. Material changes will also be noted in the app where practical.</p>
 
-<h2>8. Contact Us / 联系我们</h2>
-<p><strong>English:</strong> If you have any questions about this policy, please contact: <a href="mailto:710790589@qq.com">710790589@qq.com</a></p>
-<p class="zh"><strong>中文：</strong>如对本政策有任何疑问，请联系：<a href="mailto:710790589@qq.com">710790589@qq.com</a></p>
+<h2>Contact</h2>
+<p>Questions about any of this: <a href="mailto:710790589@qq.com">710790589@qq.com</a>. I read everything sent there.</p>
 
-<footer>© 2026 DSH Mobile. All rights reserved.</footer>
+<div class="zh">
+
+<h1>DSH Mobile 隐私政策</h1>
+<p class="updated">更新日期：2026 年 8 月 25 日</p>
+
+<p>DSH Mobile 由我个人独立开发，是一个远程客户端，用来连接你自己电脑上运行的 DeepSeek Harness（开源项目）。这个政策说白了就一句话：本应用没有账号体系、没有统计埋点、没有广告、没有追踪。你的对话只存在你自己的设备上，我这边没有任何途径看到它们。</p>
+
+<h2>什么数据存在哪</h2>
+<p>你的聊天记录只有两个存放点，都在你手里：手机上应用内的本地缓存，以及你自己的 Harness 服务器。任何对话相关内容都不会发给我，也不会存在我能控制的任何地方。</p>
+<p>把你手机和实例绑在一起的配对信息（实例 ID 和设备令牌）存在系统安全存储里（iOS 是 Keychain），目的是让你不用每次都重新输码。除了通往你自己服务器的加密连接，这些信息不会去别的任何地方。</p>
+
+<h2>关于中继服务</h2>
+<p>为了在外面也能连回家里的电脑，流量会经过我自建的一台中继服务器。它只在你手机和电脑之间转发加密字节——不保存凭据、不解密业务内容、不留内容日志。就算明天把它拔了，我手上也没有任何你的东西可以交出去。</p>
+
+<h2>权限使用</h2>
+<p>以下权限只在你用到对应功能时才会请求：</p>
+<ul>
+  <li><strong>相机</strong>——只在配对时扫描电脑屏幕上的二维码用，不会拍照存图或上传；</li>
+  <li><strong>相册</strong>——只在你在聊天里主动选图发送时用到；</li>
+  <li><strong>通知</strong>——可选，默认关闭。任务完成、待审批这类提醒由手机本地产生，没有远程推送服务器。</li>
+</ul>
+
+<h2>购买</h2>
+<p>Pro 高级功能通过 Apple 内购订阅提供。付款信息由 Apple 处理，我看不到你的卡号和账单。我能知道的最多是 Apple 在你设备上报告给应用的订阅状态。</p>
+
+<h2>没有的东西</h2>
+<p>没有账号系统，没有统计分析 SDK，没有广告，没有跨应用追踪，也没有任何针对你的服务端档案。</p>
+
+<h2>删除数据</h2>
+<p>在应用设置里删除某个实例的配对，对应的本地凭据立即清除，电脑端也会同步吊销该设备；卸载应用则本地的一切（聊天缓存、设置、凭据）随之删除。你自己 Harness 服务器上的对话由你在服务器侧自行管理。</p>
+
+<h2>未成年人</h2>
+<p>这是面向开发者的工具，不适合儿童使用，我也不会故意收集 13 岁以下用户的信息。</p>
+
+<h2>政策变更</h2>
+<p>如果这里的内容有变化，我会更新本页面并修改顶部的日期；有实质性变更时会尽量在应用内同步提示。</p>
+
+<h2>联系我</h2>
+<p>对本政策有任何疑问：<a href="mailto:710790589@qq.com">710790589@qq.com</a>，来信必读。</p>
+
+<footer>© 2026 DSH Mobile · <a href="terms.html">Terms of Use 使用条款</a></footer>
+</div>
 
 </body>
 </html>
